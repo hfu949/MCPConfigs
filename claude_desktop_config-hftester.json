@@ -1,0 +1,45 @@
+{
+  "mcpServers": {
+    "freshdesk-mcp": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote@latest",
+        "http://10.4.8.106:8000/sse",
+        "--allow-http"
+      ]
+    },
+    "dynamics-mcp": {
+      "command": "C:\\Users\\HenryF\\.dotnet\\tools\\Microsoft.PowerPlatform.Dataverse.MCP.exe",
+      "args": [
+        "--ConnectionUrl",
+        "https://make.powerautomate.com/environments/9b08015e-3311-491c-8ba9-b47be5329d1e/connections?apiName=shared_commondataserviceforapps&connectionName=fabcdab18ef24e6f92f9ea9ab7bf73c6",
+        "--MCPServerName",
+        "DataverseMCPServer",
+        "--TenantId",
+        "5c07cf1e-b199-4cf2-8046-c663e9f047c6",
+        "--EnableHttpLogging",
+        "true",
+        "--EnableMsalLogging",
+        "false",
+        "--Debug",
+        "false",
+        "--BackendProtocol",
+        "HTTP"
+      ]
+    },
+    "powerbi-modeling-mcp": {
+      "command": "C:\\MCPServers\\PowerBIModelingMCP\\extension\\server\\powerbi-modeling-mcp.exe",
+      "args": [
+        "--start"
+      ],
+      "env": {}
+    }
+  },
+  "preferences": {
+    "coworkScheduledTasksEnabled": true,
+    "ccdScheduledTasksEnabled": true,
+    "sidebarMode": "task",
+    "coworkWebSearchEnabled": true
+  }
+}
